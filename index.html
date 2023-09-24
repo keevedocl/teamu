@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página -->
+    <title>Álbum de Amor D+J</title>
+
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Aplicamos márgenes para separar las imágenes */
+        .photo-gallery {
+            margin: 20px; /* Margen igual en todos los lados del contenedor */
+            display: flex;
+            flex-wrap: wrap; /* Permite que las imágenes se envuelvan si no caben en una sola fila */
+            justify-content: space-between; /* Distribuye las imágenes de manera uniforme en el espacio disponible */
+        }
+
+        .photo {
+            margin-bottom: 20px; /* Margen inferior para separar las imágenes */
+            max-width: 200px; /* Ancho máximo de las imágenes */
+            height: auto;
+        }
+
+        /* Estilo para el corazón */
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.ibb.co/4KmDXHq/heart.png');
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        /* Estilo para el apartado de fotos */
+        .photo-section {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Estilo para el botón de volver */
+        .return-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor de la contraseña (inicialmente visible) -->
+    <div id="password-container" style="text-align: center; margin-top: 100px;">
+        <h2>Ingresa la contraseña para acceder al álbum de amor:</h2>
+        <input type="password" id="password-input" placeholder="Contraseña">
+        <button onclick="checkPassword()">Ingresar</button>
+    </div>
+
+    <!-- Contenido principal de la página (inicialmente oculto) -->
+    <div id="main-content" style="display: none;">
+        <!-- Cabecera de la página con un toque romántico -->
+        <header style="background-color: rgb(70, 8, 185); text-align: center;">
+            <h1 style="font-family: 'Brush Script MT', cursive; color: red;">Nuestro Álbum de Amor</h1>
+            <p style="font-family: 'Arial', sans-serif;">Un recuerdo de nuestros momentos más preciados.</p>
+        </header>
+
+        <!-- Sección de la galería de fotos -->
+        <section id="photo-gallery" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <!-- Aquí se mostrarán las fotos -->
+            <!-- Puedes agregar algunas fotos predeterminadas aquí -->
+            <!-- Primera imagen cuadrada -->
+            <img src="https://i.ibb.co/LN7svx2/IMG-2437.jpg" alt="Foto 1" style="width: 200px; height: 200px; object-fit: cover;">
+
+            <!-- Segunda imagen rectangular con la parte larga en vertical -->
+            <img src="https://i.ibb.co/MfYPdh4/de3b4b6e-0d6c-4991-ad63-ab979cc38bc1.jpg" alt="Foto 2" style="width: 100px; height: 200px; object-fit: cover;">
+        </section>
+        <script>
+            function showLovePhotos() {
+                var x = document.getElementById("lovePhotos");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            </script>
+<div class="photo-gallery">
+    <a href="#" style="margin: 50px;" onclick="showLovePhotos()">
+        <img class="photo" src="https://i.ibb.co/mXKPLQ6/IMG-1950.jpg" alt="Foto con mi amor">
+        <p class="photo-text">Frasesita motivadora 💕</p>
+    </a>
+    <div id="lovePhotos" style="display: none;">
+        <!-- Aquí puedes poner texto en lugar de imágenes -->
+        <p>Mi amor, cada día a tu lado es un recordatorio de la belleza y la alegría que traes a mi vida.</p>
+<p>Eres mi roca, mi confidente y mi razón para sonreír.</p>
+<p>Tu amor me da la fuerza para enfrentar cada desafío que la vida nos presente, y no hay nada que no podamos superar juntos.</p>
+<p>Cada momento a tu lado es un regalo precioso que atesoro profundamente.</p>
+<p>Te amo con todo mi corazón y siempre estaré aquí para apoyarte, cuidarte y amarte incondicionalmente.</p>
+<p>Eres la luz de mi vida, mi inspiración constante y mi compañera perfecta.</p>
+<p>Juntos, nuestro amor es invencible, y no puedo esperar para seguir construyendo un futuro lleno de amor y felicidad a tu lado.</p>
+<p>Gracias por ser mi persona especial, mi confidente y mi razón para seguir adelante.</p>
+<p>Te amo más de lo que las palabras pueden expresar, y siempre lo haré.</p>
+
+    </div>
+<style>
+    .photo-gallery {
+        text-align: center;
+    }
+
+    .photo-link {
+        display: inline-block;
+        text-decoration: none;
+        margin: 10px; /* Ajusta el margen entre las imágenes y los párrafos */
+        vertical-align: top; /* Evita que la imagen se desplace hacia abajo */
+        position: relative;
+    }
+
+    .photo-text {
+        text-align: center;
+    }
+
+    .photo-description {
+        display: none;
+        text-align: left;
+        font-size: 16px;
+        margin-top: 10px; /* Espacio entre los párrafos */
+        position: absolute;
+        top: 100%; /* Coloca el texto debajo de la imagen */
+        left: 0;
+        width: 100%;
+    }
+
+    .photo-link:focus + .photo-description {
+        display: block;
+    }
+</style>
+
+    <a href="#" style="margin: 50px;" onclick="showSoldPhotos()">
+        <img class="photo" src="https://i.ibb.co/f26GfR6/IMG-1964.jpg" alt="Vendidas">
+        <p class="photo-text">Te amo 💕</p>
+    </a>
+    <div id="soldPhotos" style="display: none;">
+        <!-- Aquí puedes poner texto en lugar de imágenes -->
+        <p>Mi amor, tratar de expresar cuánto te amo es como intentar medir el infinito, pero aquí va: Mi amor por ti es como una constante e inagotable corriente de cariño que fluye a través de cada latido de mi corazón y cada pensamiento de mi mente.</p>
+        <p>Es un amor que trasciende el tiempo y el espacio, y si alguna vez dudaras de lo profundo que es, te diré que estaría dispuesto a emprender el viaje más largo y lento que pueda imaginar, caminando a pasitos de tortuga hasta llegar a la luna, solo para mostrarte cuánto te amo.</p>
+        <p>Eso es lo que significas para mí, mi amor, un amor que no tiene límites y que siempre está dispuesto a dar un paso más allá, sin importar cuán lejos o cuánto tiempo tome.</p>
+        <p>Eres el faro que ilumina mi vida, y te amo más allá de las palabras. En cada momento que compartimos, en cada sonrisa que intercambiamos y en cada abrazo que nos damos, mi amor por ti crece y se fortalece.</p>
+        <p>Tu presencia en mi vida es un regalo inigualable, y cada día a tu lado es una bendición. No importa cuán lejos lleguemos o cuán grandes sean los desafíos que enfrentemos, quiero que sepas que siempre estaré aquí, amándote con todo mi ser.</p>
+        <p>Así que, mi amor, acepta este pequeño gesto de amor como un recordatorio de lo inmenso que es mi cariño por ti, y que este amor nos guíe en nuestro viaje juntos, como dos almas que se han encontrado en este vasto universo.</p>
+    </div>
+</div>
+
+        
+        <script>
+        function showLovePhotos() {
+            var x = document.getElementById("lovePhotos");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        
+        function showSoldPhotos() {
+            var x = document.getElementById("soldPhotos");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        
+        function returnToMain() {
+            var lovePhotos = document.getElementById("lovePhotos");
+            var soldPhotos = document.getElementById("soldPhotos");
+            
+            lovePhotos.style.display = "none";
+            soldPhotos.style.display = "none";
+        }
+        </script>
+        
+        <style>
+        #lovePhotos, #soldPhotos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        #lovePhotos img, #soldPhotos img {
+            width: 100%;
+        }
+        </style>
+        <style>
+            .photo-gallery {
+                text-align: center;
+            }
+        
+            .photo-link {
+                text-decoration: none;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px; /* Ajusta el margen entre las imágenes y los párrafos */
+            }
+        
+            .photo-text {
+                text-align: center;
+            }
+        
+            .photo-description {
+                display: none;
+                text-align: left;
+                font-size: 16px;
+                margin-top: 10px; /* Espacio entre los párrafos */
+                width: 400px; /* Establece un ancho fijo para el contenedor del texto por defecto */
+            }
+        
+            .photo-link:focus + .photo-description {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 0; /* Elimina el margen izquierdo del texto */
+                vertical-align: top;
+            }
+        
+            @media (max-width: 768px) { /* Ajusta el ancho del texto para pantallas más pequeñas */
+                .photo-description {
+                    width: 100%; /* Usa el ancho completo de la pantalla en pantallas más pequeñas */
+                }
+            }
+        </style>
+        <style>
+            /* Estilo para el contenedor principal de las fotos */
+            .photo-gallery {
+                text-align: center;
+            }
+        
+            /* Estilo para los enlaces de las fotos */
+            .photo-link {
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px; /* Ajusta el margen entre las imágenes y los párrafos */
+                vertical-align: top; /* Evita que la imagen se desplace hacia abajo */
+                position: relative;
+            }
+        
+            /* Estilo para el texto de las fotos */
+            .photo-text {
+                text-align: center;
+            }
+        
+            /* Estilo para el texto de descripción */
+            .photo-description {
+                display: none;
+                text-align: left;
+                font-size: 14px; /* Ajusta el tamaño de fuente para reducir el tamaño del texto */
+                margin-top: 10px; /* Espacio entre los párrafos */
+                max-width: 400px; /* Establece un ancho máximo para el contenedor del texto */
+                position: absolute;
+                top: 100%; /* Coloca el texto debajo de la imagen */
+                left: 0;
+                width: 100%;
+            }
+        
+            /* Mostrar el texto de descripción cuando se hace clic en la imagen */
+            .photo-link:focus + .photo-description {
+                display: block;
+            }
+        </style>
+        
+
+    <!-- Espacios para los nuevos apartados de fotos -->
+    <div id="new-love-photo-section" class="photo-section"></div>
+    <div id="new-sold-photo-section" class="photo-section"></div>
+
+    <!-- Pie de página con un mensaje romántico -->
+    <footer style="background-color: rgb(70, 8, 185); text-align: center;">
+        <p style="font-family: 'Arial', sans-serif;">Hecho con mucho amor para ti ♥️. <br>En tus ojos encontré mi hogar, en tu sonrisa hallé mi felicidad y en tu corazón descubrí mi amor eterno. Eres mi razón de ser y mi razón para amar cada día más.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // Función para verificar la contraseña ingresada
+        function checkPassword() {
+            const passwordInput = document.getElementById('password-input').value;
+            // Cambia 'tu-contraseña' por la contraseña real que desees utilizar
+            if (passwordInput === 'teamo') {
+                // Contraseña correcta, muestra el contenido principal
+                document.getElementById('password-container').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                // Contraseña incorrecta, muestra un mensaje de error
+                alert('Contraseña incorrecta. Inténtalo de nuevo.');
+            }
+        }
+
+        // Funciones para mostrar las secciones de fotos en el mismo apartado
+        function showLovePhotos() {
+            var lovePhotos = document.getElementById("lovePhotos");
+            var soldPhotos = document.getElementById("soldPhotos");
+            
+            lovePhotos.style.display = "block";
+            soldPhotos.style.display = "none";
+        }
+        
+        function showSoldPhotos() {
+            var lovePhotos = document.getElementById("lovePhotos");
+            var soldPhotos = document.getElementById("soldPhotos");
+            
+            lovePhotos.style.display = "none";
+            soldPhotos.style.display = "block";
+        }
+        
+        function returnToMain() {
+            var lovePhotos = document.getElementById("lovePhotos");
+            var soldPhotos = document.getElementById("soldPhotos");
+            
+            lovePhotos.style.display = "none";
+            soldPhotos.style.display = "none";
+        }
+        </script>
+    </body>
+    </html>
